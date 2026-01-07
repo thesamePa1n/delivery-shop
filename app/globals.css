@@ -1,26 +1,100 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-rubik-sans);
+
+  --color-background: var(--main-background);
+  --color-surface: var(--main-surface);
+  --color-primary: var(--main-primary);
+  --color-secondary: var(--main-secondary);
+  --color-background-text: var(--main-background-text);
+  --color-surface-text: var(--main-surface-text);
+  --color-primary-text: var(--main-primary-text);
+  --color-secondary-text: var(--main-secondary-text);
+
+  --color-grayscale-lightest: var(--grayscale-lightest);
+  --color-grayscale-light: var(--grayscale-light);
+  --color-grayscale-hard: var(--grayscale-hard);
+  --color-grayscale-hardest: var(--grayscale-hardest);
+
+  --color-palette-success: var(--palette-success);
+  --color-palette-info: var(--palette-info);
+  --color-palette-warning: var(--palette-warning);
+  --color-palette-error: var(--palette-error);
+
+  --color-bg-page: var(--bg-page);
+
+  --color-onPrimary: var(--onPrimary);
+  --color-onSurface: var(--onSurface);
+
+  --color-border-main-secondary: var(--main-secondary);
+
+  --shadow-default-xs: var(--default-xs);
+  --shadow-default-s: var(--default-s);
+  --shadow-default-m: var(--default-m);
+  --shadow-default-l: var(--default-l);
+  --shadow-default-xl: var(--default-xl);
+  --shadow-primary-xs: var(--primary-xs);
+  --shadow-primary-s: var(--primary-s);
+  --shadow-primary-m: var(--primary-m);
+  --shadow-primary-l: var(--primary-l);
+  --shadow-primary-xl: var(--primary-xl);
+  --shadow-secondary-xs: var(--secondary-xs);
+  --shadow-secondary-s: var(--secondary-s);
+  --shadow-secondary-m: var(--secondary-m);
+  --shadow-secondary-l: var(--secondary-l);
+  --shadow-secondary-xl: var(--secondary-xl);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --main-background: #F4F4F2;
+  --main-surface: #FFFFFF;
+  --main-primary: #FF6633;
+  --main-secondary: #70C05B;
+  --main-background-text: #291E0F;
+  --main-surface-text: #414141;
+  --main-primary-text: #FFFFFF;
+  --main-secondary-text: #FFFFFF;
+
+  --grayscale-lightest: #F3F2F1;
+  --grayscale-light: #BFBFBF;
+  --grayscale-hard: #8F8F8F;
+  --grayscale-hardest: #606060;
+
+  --palette-success: #008C49;
+  --palette-info: #1CB9FC;
+  --palette-warning: #FCA21C;
+  --palette-error: #D80000;
+
+  --bg-page: #FBF8EC;
+
+  --onPrimary: #FFFFFF;
+  --onSurface: #333333;
+
+  --default-xs: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  --default-s: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  --default-m: 4px 8px 16px rgba(0, 0, 0, 0.1);
+  --default-l: 8px 16px 32px rgba(0, 0, 0, 0.1);
+  --default-xl: 16px 32px 64px rgba(0, 0, 0, 0.1);
+  --primary-xs: 1px 2px 4px rgba(255, 102, 51, 0.2);
+  --primary-s: 2px 4px 8px rgba(255, 102, 51, 0.2);
+  --primary-m: 4px 8px 16px rgba(255, 102, 51, 0.2);
+  --primary-l: 8px 16px 32px rgba(255, 102, 51, 0.2);
+  --primary-xl: 16px 32px 64px rgba(255, 102, 51, 0.2);
+  --secondary-xs: 1px 2px 4px rgba(112, 192, 91, 0.2);
+  --secondary-s: 2px 4px 8px rgba(112, 192, 91, 0.2);
+  --secondary-m: 4px 8px 16px rgba(112, 192, 91, 0.2);
+  --secondary-l: 8px 16px 32px rgba(112, 192, 91, 0.2);
+  --secondary-xl: 16px 32px 64px rgba(112, 192, 91, 0.2);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
