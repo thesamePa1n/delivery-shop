@@ -15,6 +15,7 @@
   --color-surface-text: var(--main-surface-text);
   --color-primary-text: var(--main-primary-text);
   --color-secondary-text: var(--main-secondary-text);
+  --color-fill-primary-muted: var(--main-primary-muted);
 
   --color-grayscale-lightest: var(--grayscale-lightest);
   --color-grayscale-light: var(--grayscale-light);
@@ -59,6 +60,7 @@
   --main-surface-text: #414141;
   --main-primary-text: #FFFFFF;
   --main-secondary-text: #FFFFFF;
+  --main-primary-muted: #FCD5BA;
 
   --grayscale-lightest: #F3F2F1;
   --grayscale-light: #BFBFBF;

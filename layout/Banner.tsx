@@ -18,7 +18,7 @@ const Banner = () => {
         disableOnInteraction: false
       }}
       draggable={true}
-      className="mt-1 bg-onPrimary"
+      className="mt-1 mb-20 bg-onPrimary"
     >
       <SwiperSlide>
         <div className="bg-[url('/pattern.png')] bg-repeat-x flex justify-center items-center">
