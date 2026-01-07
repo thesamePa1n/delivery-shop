@@ -12,16 +12,16 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-onPrimary">
+    <header className="bg-onPrimary shadow-default-s">
       <div className="max-w-302 mx-auto px-4 py-2.75 flex gap-10 items-center">
         <Link href="/">
           <Image src="/logo.svg" alt="logo" width={152} height={32} />
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-1">
           <Button className="bg-secondary hover:bg-secondary/90 cursor-pointer text-onPrimary w-35 h-10 rounded-sm font-normal gap-5 items-center text-base">
             <Menu /> Каталог
           </Button>
-          <div className="relative">
+          <div className="relative flex-2">
             <Input
               type="text"
               placeholder="Найти товар"
