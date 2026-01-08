@@ -1,3 +1,4 @@
+import Specials from "@/components/main/Specials";
 import Banner from "@/layout/Banner";
 import Header from "@/layout/Header";
 import Products from "@/shared/ui/Products";
@@ -16,6 +17,7 @@ export default function Home() {
           rightTitle="Все покупки"
           category="previously"
         />
+        <Specials />
       </main>
     </div>
   );
