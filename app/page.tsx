@@ -1,6 +1,7 @@
 import Articles from "@/components/main/Articles";
 import Specials from "@/components/main/Specials";
 import Banner from "@/layout/Banner";
+import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
 import Products from "@/shared/ui/Products";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Specials />
         <Articles />
       </main>
+      <Footer />
     </div>
   );
 }
