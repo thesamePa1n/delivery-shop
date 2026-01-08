@@ -1,3 +1,4 @@
+import Articles from "@/components/main/Articles";
 import Specials from "@/components/main/Specials";
 import Banner from "@/layout/Banner";
 import Header from "@/layout/Header";
@@ -18,6 +19,7 @@ export default function Home() {
           category="previously"
         />
         <Specials />
+        <Articles />
       </main>
     </div>
   );

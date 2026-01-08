@@ -1,5 +1,5 @@
-export interface Article {
-  id: string
+export interface IArticle {
+  id: number
   img: string
   title: string
   text: string

@@ -22,7 +22,7 @@ const Products = ({ title, rightTitle, category }: Props) => {
           <ChevronRight />
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-10">
         {products
           .filter((item) => item.categories.includes(category))
           .slice(0, 4)

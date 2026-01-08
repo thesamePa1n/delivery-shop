@@ -13,3 +13,8 @@ const clientPromise = client.connect()
 export const getDB = async () => {
   return (await clientPromise).db(process.env.DELIVERY_SHOP_DB_NAME!)
 }
+
+export const formatToRuDate = (date: string) => {
+  const newDate = new Date(date)
+  return newDate.toLocaleDateString('ru-RU')
+}
