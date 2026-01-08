@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "img": "/products/product-1.jpg",
     "title": "Блинчики с мясом",
     "description": "Г/Ц Блинчики с мясом вес, Россия",
@@ -11,7 +10,6 @@
     "weight": "400 г"
   },
   {
-    "id": 2,
     "img": "/products/product-2.jpg",
     "title": "Молоко Простоквашино",
     "description": "Молоко пастеризованное цельное",
@@ -22,7 +20,6 @@
     "weight": "1 л"
   },
   {
-    "id": 3,
     "img": "/products/product-3.jpg",
     "title": "Колбаса Сальчичон",
     "description": "Колбаса сырокопченая премиум класса",
@@ -33,7 +30,6 @@
     "weight": "500 г"
   },
   {
-    "id": 4,
     "img": "/products/product-4.jpg",
     "title": "Сосиски Молочные",
     "description": "Сосиски вареные высшего сорта",
@@ -44,7 +40,6 @@
     "weight": "400 г"
   },
   {
-    "id": 5,
     "img": "/products/product-5.jpg",
     "title": "Колбаса Сальчинон",
     "description": "Колбаса сырокопченая",
@@ -55,7 +50,6 @@
     "weight": "600 г"
   },
   {
-    "id": 6,
     "img": "/products/product-6.jpg",
     "title": "Сыр Ламбер",
     "description": "Сыр Ламбер Маасдам полутвердый 45%, 180г",
@@ -66,7 +60,6 @@
     "weight": "180 г"
   },
   {
-    "id": 7,
     "img": "/products/product-7.jpg",
     "title": "Пельмени Сибирская коллекция",
     "description": "Пельмени Сибирская коллекция, категория В, 700г",
@@ -77,7 +70,6 @@
     "weight": "700 г"
   },
   {
-    "id": 8,
     "img": "/products/product-8.jpg",
     "title": "Сырок творожный",
     "description": "Сырок творожный Родимая Сторонка 8% с изюмом 100г, категория В, 700г",
@@ -88,7 +80,6 @@
     "weight": "100 г"
   },
   {
-    "id": 9,
     "img": "/products/product-9.jpg",
     "title": "Комбайн",
     "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
@@ -99,7 +90,6 @@
     "weight": "300 г"
   },
   {
-    "id": 10,
     "img": "/products/product-10.jpg",
     "title": "Сосиски Говяжьи",
     "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
@@ -110,7 +100,6 @@
     "weight": "325 г"
   },
   {
-    "id": 11,
     "img": "/products/product-11.jpg",
     "title": "Колбаса копченая",
     "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
@@ -121,7 +110,6 @@
     "weight": "200 г"
   },
   {
-    "id": 12,
     "img": "/products/product-12.jpg",
     "title": "Молоко Простоквашино",
     "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",

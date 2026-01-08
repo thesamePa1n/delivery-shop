@@ -1,5 +1,5 @@
 export interface IProductCard {
-  id: number
+  _id: string
   img: string
   title: string
   description: string
