@@ -2,45 +2,66 @@ import Image from "next/image";
 import Heart from "../icons/Heart";
 import { Button } from "@/components/ui/button";
 import Star from "../icons/Star";
+import { IProductCard } from "../types/product";
 
-const Card = () => {
+const Card = ({
+  basePrice,
+  img,
+  rating,
+  title,
+  discountPercent,
+}: IProductCard) => {
   return (
     <div className="w-68 rounded-sm cursor-pointer shadow-default-s bg-onPrimary transition-shadow duration-200 hover:shadow-primary-m">
       <div className="relative">
-        <Image src="/card.png" alt="карточка" width={272} height={160} />
+        <Image src={img} alt="карточка" width={272} height={160} />
         <button className="absolute right-2 top-2">
           <Heart />
         </button>
-        <span className="absolute rounded-sm left-2.5 bottom-2.5 text-onPrimary text-base leading-[150%] w-14 h-8 bg-primary flex items-center justify-center">
-          -50%
-        </span>
+        {discountPercent ? (
+          <span className="absolute rounded-sm left-2.5 bottom-2.5 text-onPrimary text-base leading-[150%] w-14 h-8 bg-primary flex items-center justify-center">
+            -{discountPercent}%
+          </span>
+        ) : null}
       </div>
       <div className="p-2 flex flex-col gap-2">
-        <div className="flex justify-between">
-          <div className="flex flex-col">
-            <span className="font-bold text-lg leading-[150%] text-surface-text">
-              44,50 ₽
-            </span>
-            <span className="text-xs leading-[150%] text-grayscale-light">
-              С картой
-            </span>
+        {discountPercent ? (
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <span className="font-bold text-lg leading-[150%] text-surface-text">
+                {(basePrice * (1 - discountPercent / 100)).toFixed(2)} ₽
+              </span>
+              <span className="text-xs leading-[150%] text-grayscale-light">
+                С картой
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-base leading-[150%] text-grayscale-hardest">
+                {(basePrice * (1 - discountPercent / 100) * (1 + 0.05)).toFixed(
+                  2
+                )}{" "}
+                ₽
+              </span>
+              <span className="text-xs leading-[150%] text-grayscale-light">
+                Обычная
+              </span>
+            </div>
           </div>
-          <div className="flex flex-col">
-            <span className="text-base leading-[150%] text-grayscale-hardest">
-              50,50 ₽
-            </span>
-            <span className="text-xs leading-[150%] text-grayscale-light">
-              Обычная
-            </span>
-          </div>
-        </div>
+        ) : (
+          <p className="font-bold text-lg leading-[150%] text-surface-text">
+            {basePrice.toFixed(2)} ₽
+          </p>
+        )}
+
         <div className="text-base leading-[150%] text-surface-text">
-          Г/Ц Блинчики с мясом вес, Россия
+          {title}
         </div>
         <div className="flex gap-1">
-          {...Array(5)
-            .fill(0)
-            .map((_, index) => <Star key={index} />)}
+          {Array.from({ length: 5 }, (_, index) => {
+            const starValue = rating - index;
+            const fillPercent = Math.max(0, Math.min(1, starValue)) * 100;
+            return <Star key={index} fillPercent={fillPercent} />;
+          })}{" "}
         </div>
         <Button className="bg-transparent border border-secondary rounded-sm text-secondary font-normal text-base leading-[150%] h-10 transition-colors duration-200 hover:border-none hover:bg-primary hover:text-onPrimary">
           В корзину

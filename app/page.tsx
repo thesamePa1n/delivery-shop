@@ -1,6 +1,6 @@
 import Banner from "@/layout/Banner";
 import Header from "@/layout/Header";
-import Card from "@/shared/ui/Card";
+import Products from "@/shared/ui/Products";
 
 export default function Home() {
   return (
@@ -8,8 +8,18 @@ export default function Home() {
       <Header />
       <Banner />
       <main className="max-w-302 mx-auto px-4">
-        <Card />
+        {/* <Actions /> */}
+        <Products title="Акции" rightTitle="Все акции" category="actions" />
+        <Products title="Новинки" rightTitle="Все новинки" category="new" />
+        <Products
+          title="Покупали раньше"
+          rightTitle="Все покупки"
+          category="previously"
+        />
       </main>
     </div>
   );
 }
+
+//nirU9g86h3SjwxvV
+//

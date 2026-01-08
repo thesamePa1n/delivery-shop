@@ -1,0 +1,13 @@
+import { getDB } from "@/lib/utils";
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  try {
+    const db = await getDB()
+    const articles = await db.collection('articles').find().toArray()
+    return NextResponse.json(articles)
+  } catch (error) {
+    console.error('Ошибка сервера', error)
+    return NextResponse.json({ message: 'Ошибка сервера' }, { status: 500 })
+  }
+}

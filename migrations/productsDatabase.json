@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "img": "/products/product-1.jpg",
+    "title": "Блинчики с мясом",
+    "description": "Г/Ц Блинчики с мясом вес, Россия",
+    "basePrice": 89.0,
+    "discountPercent": 20,
+    "rating": 4.2,
+    "categories": ["actions", "food"],
+    "weight": "400 г"
+  },
+  {
+    "id": 2,
+    "img": "/products/product-2.jpg",
+    "title": "Молоко Простоквашино",
+    "description": "Молоко пастеризованное цельное",
+    "basePrice": 89.0,
+    "discountPercent": 15,
+    "rating": 4.5,
+    "categories": ["actions", "dairy"],
+    "weight": "1 л"
+  },
+  {
+    "id": 3,
+    "img": "/products/product-3.jpg",
+    "title": "Колбаса Сальчичон",
+    "description": "Колбаса сырокопченая премиум класса",
+    "basePrice": 350.0,
+    "discountPercent": 25,
+    "rating": 4.8,
+    "categories": ["actions", "meat"],
+    "weight": "500 г"
+  },
+  {
+    "id": 4,
+    "img": "/products/product-4.jpg",
+    "title": "Сосиски Молочные",
+    "description": "Сосиски вареные высшего сорта",
+    "basePrice": 250.0,
+    "discountPercent": 10,
+    "rating": 2.4,
+    "categories": ["actions", "meat"],
+    "weight": "400 г"
+  },
+  {
+    "id": 5,
+    "img": "/products/product-5.jpg",
+    "title": "Колбаса Сальчинон",
+    "description": "Колбаса сырокопченая",
+    "basePrice": 599.99,
+    "discountPercent": 0,
+    "rating": 3.5,
+    "categories": ["meat", "new"],
+    "weight": "600 г"
+  },
+  {
+    "id": 6,
+    "img": "/products/product-6.jpg",
+    "title": "Сыр Ламбер",
+    "description": "Сыр Ламбер Маасдам полутвердый 45%, 180г",
+    "basePrice": 134.99,
+    "discountPercent": 0,
+    "rating": 5,
+    "categories": ["dairy", "new"],
+    "weight": "180 г"
+  },
+  {
+    "id": 7,
+    "img": "/products/product-7.jpg",
+    "title": "Пельмени Сибирская коллекция",
+    "description": "Пельмени Сибирская коллекция, категория В, 700г",
+    "basePrice": 359.99,
+    "discountPercent": 0,
+    "rating": 5,
+    "categories": ["meat", "new"],
+    "weight": "700 г"
+  },
+  {
+    "id": 8,
+    "img": "/products/product-8.jpg",
+    "title": "Сырок творожный",
+    "description": "Сырок творожный Родимая Сторонка 8% с изюмом 100г, категория В, 700г",
+    "basePrice": 64.99,
+    "discountPercent": 0,
+    "rating": 5,
+    "categories": ["dairy", "new"],
+    "weight": "100 г"
+  },
+  {
+    "id": 9,
+    "img": "/products/product-9.jpg",
+    "title": "Комбайн",
+    "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+    "basePrice": 77.99,
+    "discountPercent": 0,
+    "rating": 2,
+    "categories": ["meat", "previously"],
+    "weight": "300 г"
+  },
+  {
+    "id": 10,
+    "img": "/products/product-10.jpg",
+    "title": "Сосиски Говяжьи",
+    "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+    "basePrice": 159.99,
+    "discountPercent": 0,
+    "rating": 3.3,
+    "categories": ["dairy", "previously"],
+    "weight": "325 г"
+  },
+  {
+    "id": 11,
+    "img": "/products/product-11.jpg",
+    "title": "Колбаса копченая",
+    "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+    "basePrice": 599.99,
+    "discountPercent": 0,
+    "rating": 4.5,
+    "categories": ["meat", "previously"],
+    "weight": "200 г"
+  },
+  {
+    "id": 12,
+    "img": "/products/product-12.jpg",
+    "title": "Молоко Простоквашино",
+    "description": "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+    "basePrice": 49.39,
+    "discountPercent": 0,
+    "rating": 2.5,
+    "categories": ["dairy", "previously"],
+    "weight": "300 г"
+  }
+]
