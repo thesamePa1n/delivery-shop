@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-onPrimary shadow-default-s">
+    <header className="bg-onPrimary shadow-default-s mb-6">
       <div className="max-w-302 mx-auto px-4 py-2.75 flex gap-10 items-center">
         <Link href="/">
           <Image src="/logo.svg" alt="logo" width={152} height={32} />
