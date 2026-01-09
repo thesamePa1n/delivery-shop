@@ -7,7 +7,7 @@ const Articles = async () => {
   const articles = await getArticles()
 
   return (
-    <div className="mb-20">
+    <div className="">
       <div className="flex items-center justify-between mb-10">
         <h3 className="text-onSurface font-bold text-4xl leading-[150%]">
           Статьи

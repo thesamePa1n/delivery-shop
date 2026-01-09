@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="py-6 bg-[url(/footer-pattern.png)] bg-[#F9F4E2]">
+    <footer className="mt-20 py-6 bg-[url(/footer-pattern.png)] bg-[#F9F4E2]">
       <div className="max-w-302 mx-auto px-4 flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div className="flex gap-10 items-center">

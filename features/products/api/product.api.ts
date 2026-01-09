@@ -9,6 +9,7 @@ export const getProducts = async (category: string) => {
       `${process.env.NEXT_PUBLIC_BASE_URL!}/api/products?category=${category}`
     );
     products = await res.json();
+    console.log(products)
     products = shuffleArray(products);
   } catch (err) {
     console.error("Ошибка в компоненте Products", err);

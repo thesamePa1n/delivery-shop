@@ -1,6 +1,7 @@
 import Specials from "@/components/main/Specials";
 import Articles from "@/features/articles/ui/Articles";
 import Products from "@/features/products/ui/Products";
+import Purchases from "@/features/users/ui/Purchases";
 import Banner from "@/layout/Banner";
 
 export default function Home() {
@@ -20,12 +21,7 @@ export default function Home() {
           category="new"
           href="/news"
         />
-        <Products
-          title="Покупали раньше"
-          rightTitle="Все покупки"
-          category="previously"
-          href="/previously"
-        />
+        <Purchases />
         <Specials />
         <Articles />
       </main>

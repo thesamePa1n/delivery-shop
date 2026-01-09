@@ -13,8 +13,8 @@ const Card = ({
 }: IProductCard) => {
   return (
     <div className="w-68 rounded-sm cursor-pointer shadow-default-s bg-onPrimary transition-shadow duration-200 hover:shadow-primary-m">
-      <div className="relative">
-        <Image src={img} alt="карточка" width={272} height={160} />
+      <div className="relative w-68 h-40">
+        <Image src={img} alt="карточка" fill className="object-contain" sizes="272px" />
         <button className="absolute right-2 top-2">
           <Heart />
         </button>
@@ -53,7 +53,7 @@ const Card = ({
           </p>
         )}
 
-        <div className="text-base leading-[150%] text-surface-text">
+        <div className="text-base leading-[150%] text-surface-text line-clamp-1">
           {title}
         </div>
         <div className="flex gap-1">

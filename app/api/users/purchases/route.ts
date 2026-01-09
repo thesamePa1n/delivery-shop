@@ -2,7 +2,6 @@ import { getDB } from "@/lib/utils";
 import { IProductCard } from "@/shared/types/product";
 import { IUser } from "@/shared/types/users";
 import { NextResponse } from "next/server";
-export const revalidate = 3600
 
 export async function GET() {
   try {

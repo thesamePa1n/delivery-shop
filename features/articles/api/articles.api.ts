@@ -7,7 +7,7 @@ export const getArticles = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL!}/api/articles`)
     articles = await res.json()
   } catch (err) {
-    console.error('Ошибка в компоненте Article', err)
+    console.error('Ошибка в компоненте Articles', err)
   }
 
   return articles
