@@ -1,7 +1,7 @@
-import AllArticles from "@/features/articles/ui/AllArticles";
+import AllArticlesServer from "@/features/articles/ui/AllArticlesServer";
 
 const Page = () => {
-  return <AllArticles title="Все статьи" />;
+  return <AllArticlesServer />;
 };
 
 export default Page;

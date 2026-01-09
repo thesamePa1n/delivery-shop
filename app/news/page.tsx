@@ -1,7 +1,7 @@
-import AllProducts from "@/features/products/ui/AllProducts";
+import AllProductsServer from "@/features/products/ui/AllProductsServer";
 
 const NewsPage = async () => {
-  return <AllProducts title="Все новинки" category="new" />;
+  return <AllProductsServer title="Все новинки" category="new" />;
 };
 
 export default NewsPage;

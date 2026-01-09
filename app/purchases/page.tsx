@@ -1,7 +1,7 @@
-import AllPurchases from "@/features/users/ui/AllPurchases";
+import AllPurchasesServer from "@/features/users/ui/AllPurchasesServer";
 
 const PurchasesPage = async () => {
-  return <AllPurchases title="Все покупки"/>
+  return <AllPurchasesServer />;
 };
 
 export default PurchasesPage;

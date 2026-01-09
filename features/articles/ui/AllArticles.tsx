@@ -1,8 +1,19 @@
-import { getArticles } from "../api/articles.api";
-import Article from "@/shared/ui/Article";
+"use client";
 
-const AllArticles = async ({ title }: { title: string }) => {
-  const articles = await getArticles();
+import { usePagination } from "@/shared/hooks/usePagination";
+import { IArticle } from "@/shared/types/articles";
+import Article from "@/shared/ui/Article";
+import Paginate from "@/shared/ui/Paginate";
+
+const AllArticles = ({
+  title,
+  articles,
+}: {
+  title: string;
+  articles: IArticle[];
+}) => {
+  const { currentItems, currentPage, setCurrentPage, totalPages } =
+    usePagination(articles, 6);
 
   return (
     <div className="max-w-302 mx-auto px-4">
@@ -11,10 +22,16 @@ const AllArticles = async ({ title }: { title: string }) => {
       </h3>
 
       <div className="grid grid-cols-3 gap-10">
-        {articles.slice(0, 3).map((item) => (
+        {currentItems.map((item) => (
           <Article key={item._id} {...item} />
         ))}
       </div>
+
+      <Paginate
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 };

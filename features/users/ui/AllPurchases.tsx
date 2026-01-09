@@ -1,8 +1,19 @@
-import Card from "@/shared/ui/Card";
-import { getPurchases } from "../api/user.api";
+"use client";
 
-const AllPurchases = async ({ title }: { title: string }) => {
-  const purchases = await getPurchases();
+import Card from "@/shared/ui/Card";
+import { usePagination } from "@/shared/hooks/usePagination";
+import { IProductCard } from "@/shared/types/product";
+import Paginate from "@/shared/ui/Paginate";
+
+const AllPurchases = ({
+  title,
+  purchases,
+}: {
+  title: string;
+  purchases: IProductCard[];
+}) => {
+  const { currentItems, currentPage, setCurrentPage, totalPages } =
+    usePagination(purchases, 6);
 
   return (
     <div className="max-w-302 mx-auto px-4">
@@ -10,10 +21,16 @@ const AllPurchases = async ({ title }: { title: string }) => {
         {title}
       </h3>
       <div className="grid grid-cols-4 gap-10">
-        {purchases.map((item) => (
+        {currentItems.map((item) => (
           <Card key={item._id} {...item} />
         ))}
       </div>
+
+      <Paginate
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 };

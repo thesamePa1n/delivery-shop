@@ -1,7 +1,7 @@
-import AllProducts from "@/features/products/ui/AllProducts";
+import AllProductsServer from "@/features/products/ui/AllProductsServer";
 
 const ActionsPage = async () => {
-  return <AllProducts title="Все акции" category="actions" />;
+  return <AllProductsServer title="Все акции" category="actions" />;
 };
 
 export default ActionsPage;

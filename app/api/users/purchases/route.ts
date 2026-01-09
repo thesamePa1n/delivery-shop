@@ -1,4 +1,4 @@
-import { getDB } from "@/lib/utils";
+import { getDB } from "@/lib/db";
 import { IProductCard } from "@/shared/types/product";
 import { IUser } from "@/shared/types/users";
 import { NextResponse } from "next/server";
