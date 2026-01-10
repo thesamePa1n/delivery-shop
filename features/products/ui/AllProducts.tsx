@@ -4,6 +4,7 @@ import { usePagination } from "@/shared/hooks/usePagination";
 import Paginate from "@/shared/ui/Paginate";
 import Card from "@/shared/ui/Card";
 import { IProductCard } from "@/shared/types/product";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function AllProducts({
   title,
@@ -14,8 +15,26 @@ export default function AllProducts({
   category: string;
   products: IProductCard[];
 }) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pageFromUrl = parseInt(searchParams.get("page") || "1");
+
   const { currentItems, currentPage, setCurrentPage, totalPages } =
-    usePagination(products, 6);
+    usePagination(products, 6, pageFromUrl);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (page === 1) {
+      params.delete("page");
+    } else {
+      params.set("page", page.toString());
+    }
+
+    router.push(`?${params.toString()}`, { scroll: true });
+  };
 
   const filtered = currentItems.filter((item) =>
     item.categories.includes(category)
@@ -35,7 +54,7 @@ export default function AllProducts({
 
       <Paginate
         currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
+        setCurrentPage={handlePageChange}
         totalPages={totalPages}
       />
     </div>

@@ -1,4 +1,3 @@
-import { shuffleArray } from "@/lib/utils";
 import { IProductCard } from "@/shared/types/product";
 
 export const getProducts = async (category: string) => {
@@ -12,7 +11,7 @@ export const getProducts = async (category: string) => {
     const availableProducts: IProductCard[] = products.filter(
       (item) => item.quantity > 0
     );
-    return shuffleArray(availableProducts);
+    return availableProducts;
   } catch (err) {
     console.error("Ошибка в компоненте Products", err);
   }

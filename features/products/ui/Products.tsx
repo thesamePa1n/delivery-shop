@@ -1,3 +1,4 @@
+import { shuffleArray } from "@/lib/utils";
 import { getProducts } from "../api/product.api";
 import ProductsClient from "./Product.client";
 
@@ -11,10 +12,10 @@ type Props = {
 const Products = async ({ title, rightTitle, category, href }: Props) => {
   const products = await getProducts(category);
   if (!products) {
-    return <div>Ошибка в получении продуктов</div>
+    return <div>Ошибка в получении продуктов</div>;
   }
-  
-  const filteredProducts = products
+
+  const filteredProducts = shuffleArray(products)
     .filter((item) => item.categories.includes(category))
     .slice(0, 4);
 

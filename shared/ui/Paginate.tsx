@@ -17,7 +17,7 @@ export default function Paginate({
   totalPages,
 }: {
   currentPage: number;
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  setCurrentPage: (num: number) => void;
   totalPages: number;
 }) {
   return (
@@ -32,7 +32,7 @@ export default function Paginate({
             </PaginationItem>
             <PaginationItem>
               <PaginationPrevious
-                onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
               />
             </PaginationItem>
 
@@ -50,7 +50,7 @@ export default function Paginate({
             <PaginationItem>
               <PaginationNext
                 onClick={() =>
-                  setCurrentPage((p) => Math.min(p + 1, totalPages))
+                  setCurrentPage(Math.min(currentPage + 1, totalPages))
                 }
               />
             </PaginationItem>

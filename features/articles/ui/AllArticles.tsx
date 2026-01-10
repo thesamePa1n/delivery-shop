@@ -4,6 +4,7 @@ import { usePagination } from "@/shared/hooks/usePagination";
 import { IArticle } from "@/shared/types/articles";
 import Article from "@/shared/ui/Article";
 import Paginate from "@/shared/ui/Paginate";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const AllArticles = ({
   title,
@@ -12,8 +13,25 @@ const AllArticles = ({
   title: string;
   articles: IArticle[];
 }) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pageFromUrl = parseInt(searchParams.get("page") || "1");
   const { currentItems, currentPage, setCurrentPage, totalPages } =
-    usePagination(articles, 6);
+    usePagination(articles, 6, pageFromUrl);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (page === 1) {
+      params.delete("page");
+    } else {
+      params.set("page", page.toString());
+    }
+
+    router.push(`?${params.toString()}`, { scroll: true });
+  };
 
   return (
     <div className="max-w-302 mx-auto px-4">
@@ -29,7 +47,7 @@ const AllArticles = ({
 
       <Paginate
         currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
+        setCurrentPage={handlePageChange}
         totalPages={totalPages}
       />
     </div>
