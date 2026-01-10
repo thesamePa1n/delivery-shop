@@ -58,10 +58,10 @@ const Card = ({
         </div>
         <div className="flex gap-1">
           {Array.from({ length: 5 }, (_, index) => {
-            const starValue = rating - index;
+            const starValue = rating.rate - index;
             const fillPercent = Math.max(0, Math.min(1, starValue)) * 100;
             return <Star key={index} fillPercent={fillPercent} />;
-          })}{" "}
+          })}
         </div>
         <Button className="bg-transparent border border-secondary rounded-sm text-secondary font-normal text-base leading-[150%] h-10 transition-colors duration-200 hover:border-none hover:bg-primary hover:text-onPrimary">
           В корзину
