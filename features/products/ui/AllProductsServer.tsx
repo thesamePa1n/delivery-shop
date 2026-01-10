@@ -1,3 +1,4 @@
+import { IProductCard } from "@/shared/types/product";
 import { getProducts } from "../api/product.api";
 import AllProducts from "./AllProducts";
 
@@ -8,7 +9,7 @@ export default async function AllProductsServer({
   title: string;
   category: string;
 }) {
-  const products = await getProducts(category);
+  const products = await getProducts(category) as IProductCard[];
 
   return <AllProducts title={title} category={category} products={products} />;
 }

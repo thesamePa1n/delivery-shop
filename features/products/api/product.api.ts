@@ -9,10 +9,11 @@ export const getProducts = async (category: string) => {
       `${process.env.NEXT_PUBLIC_BASE_URL!}/api/products?category=${category}`
     );
     products = await res.json();
-    products = shuffleArray(products);
+    const availableProducts: IProductCard[] = products.filter(
+      (item) => item.quantity > 0
+    );
+    return shuffleArray(availableProducts);
   } catch (err) {
     console.error("Ошибка в компоненте Products", err);
   }
-
-  return products
 };

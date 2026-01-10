@@ -10,6 +10,9 @@ type Props = {
 
 const Products = async ({ title, rightTitle, category, href }: Props) => {
   const products = await getProducts(category);
+  if (!products) {
+    return <div>Ошибка в получении продуктов</div>
+  }
   
   const filteredProducts = products
     .filter((item) => item.categories.includes(category))

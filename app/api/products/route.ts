@@ -1,8 +1,8 @@
 import { getDB } from "@/lib/db";
-import { NextResponse } from "next/server";
-export const revalidate = 3600
+import { NextRequest, NextResponse } from "next/server";
+export const revalidate = 0
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   try {
     const category = new URL(request.url).searchParams.get("category");
 
