@@ -18,7 +18,7 @@ export async function GET(request: NextRequest) {
       .toArray();
     return NextResponse.json(products);
   } catch (error) {
-    console.error("Ошибка сервера", error);
+    console.error("Ошибка сервера есть же", error);
     return NextResponse.json({ message: "Ошибка при загрузке продуктов" }, { status: 500 });
   }
 }
