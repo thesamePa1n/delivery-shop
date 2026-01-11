@@ -34,7 +34,7 @@ const AllArticles = ({
   };
 
   return (
-    <div className="max-w-302 mx-auto px-4">
+    <>
       <h3 className="text-onSurface font-bold text-4xl leading-[150%] mb-10">
         {title}
       </h3>
@@ -50,7 +50,7 @@ const AllArticles = ({
         setCurrentPage={handlePageChange}
         totalPages={totalPages}
       />
-    </div>
+    </>
   );
 };
 

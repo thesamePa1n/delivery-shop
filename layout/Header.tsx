@@ -38,7 +38,7 @@ const Header = () => {
             href="/favorites"
             className="flex flex-col items-center gap-2 group"
           >
-            <Favorite />{" "}
+            <Favorite className="transition-colors duration-200 group-hover:text-primary"/>
             <span className="text-surface-text text-xs leading-[150%] transition-colors duration-200 group-hover:text-primary">
               Избранное
             </span>
@@ -47,13 +47,13 @@ const Header = () => {
             href="/orders"
             className="flex flex-col items-center gap-2 group"
           >
-            <Order />{" "}
+            <Order className="transition-colors duration-200 group-hover:text-primary"/>
             <span className="text-surface-text text-xs leading-[150%] transition-colors duration-200 group-hover:text-primary">
               Заказы
             </span>
           </Link>
           <Link href="/cart" className="flex flex-col items-center gap-2 group">
-            <Cart />{" "}
+            <Cart className="transition-colors duration-200 group-hover:text-primary"/>
             <span className="text-surface-text text-xs leading-[150%] transition-colors duration-200 group-hover:text-primary">
               Корзина
             </span>
