@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Cart from "@/shared/icons/Cart";
 import ChevronDown from "@/shared/icons/ChevronDown";
@@ -18,9 +17,12 @@ const Header = () => {
           <Image src="/logo.svg" alt="logo" width={152} height={32} />
         </Link>
         <div className="flex items-center gap-4 flex-1">
-          <Button className="bg-secondary hover:bg-secondary/90 cursor-pointer text-onPrimary w-35 h-10 rounded-sm font-normal gap-5 items-center text-base">
+          <Link
+            className="bg-secondary hover:bg-secondary/90 text-onPrimary w-35 h-10 rounded-sm font-normal gap-5 flex justify-center items-center text-base"
+            href="/catalog"
+          >
             <Menu /> Каталог
-          </Button>
+          </Link>
           <div className="relative flex-2">
             <Input
               type="text"
@@ -38,7 +40,7 @@ const Header = () => {
             href="/favorites"
             className="flex flex-col items-center gap-2 group"
           >
-            <Favorite className="transition-colors duration-200 group-hover:text-primary"/>
+            <Favorite className="transition-colors duration-200 group-hover:text-primary" />
             <span className="text-surface-text text-xs leading-[150%] transition-colors duration-200 group-hover:text-primary">
               Избранное
             </span>
@@ -47,13 +49,13 @@ const Header = () => {
             href="/orders"
             className="flex flex-col items-center gap-2 group"
           >
-            <Order className="transition-colors duration-200 group-hover:text-primary"/>
+            <Order className="transition-colors duration-200 group-hover:text-primary" />
             <span className="text-surface-text text-xs leading-[150%] transition-colors duration-200 group-hover:text-primary">
               Заказы
             </span>
           </Link>
           <Link href="/cart" className="flex flex-col items-center gap-2 group">
-            <Cart className="transition-colors duration-200 group-hover:text-primary"/>
+            <Cart className="transition-colors duration-200 group-hover:text-primary" />
             <span className="text-surface-text text-xs leading-[150%] transition-colors duration-200 group-hover:text-primary">
               Корзина
             </span>
