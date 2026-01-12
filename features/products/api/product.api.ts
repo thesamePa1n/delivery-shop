@@ -1,17 +1,25 @@
 import { IProductCard } from "@/shared/types/product";
 
-export const getProducts = async (category: string) => {
-  let products: IProductCard[] = [];
+export const getProducts = async (
+  category: string,
+  options?: { randomLimit?: number }
+) => {
 
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL!}/api/products?category=${category}`
-    );
-    products = await res.json();
-    const availableProducts: IProductCard[] = products.filter(
-      (item) => item.quantity > 0
-    );
-    return availableProducts;
+    const url = new URL(`${process.env.NEXT_PUBLIC_BASE_URL!}/api/products`);
+    url.searchParams.append("category", category);
+
+    if (options?.randomLimit) {
+      url.searchParams.append("randomLimit", options.randomLimit.toString());
+    }
+
+    const res = await fetch(url.toString(), { next: { revalidate: 3600 } });
+    if (!res.ok) {
+      throw new Error(`Серверная ошибка получения продуктов ${category}`)
+    }
+
+    const data:IProductCard[] = await res.json()
+    return data;
   } catch (err) {
     console.error("Ошибка в компоненте Products", err);
   }

@@ -1,5 +1,6 @@
 "use client";
 
+import { CONFIG } from "@/shared/config/config";
 import { usePagination } from "@/shared/hooks/usePagination";
 import { IArticle } from "@/shared/types/articles";
 import Article from "@/shared/ui/Article";
@@ -17,7 +18,7 @@ const AllArticles = ({
   const searchParams = useSearchParams();
   const pageFromUrl = parseInt(searchParams.get("page") || "1");
   const { currentItems, currentPage, setCurrentPage, totalPages } =
-    usePagination(articles, 6, pageFromUrl);
+    usePagination(articles, CONFIG.ITEMS_PER_PAGE, pageFromUrl);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);

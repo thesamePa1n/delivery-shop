@@ -5,6 +5,7 @@ import Paginate from "@/shared/ui/Paginate";
 import Card from "@/shared/ui/Card";
 import { IProductCard } from "@/shared/types/product";
 import { useRouter, useSearchParams } from "next/navigation";
+import { CONFIG } from "@/shared/config/config";
 
 export default function AllProducts({
   title,
@@ -20,7 +21,7 @@ export default function AllProducts({
   const pageFromUrl = parseInt(searchParams.get("page") || "1");
 
   const { currentItems, currentPage, setCurrentPage, totalPages } =
-    usePagination(products, 6, pageFromUrl);
+    usePagination(products, CONFIG.ITEMS_PER_PAGE, pageFromUrl);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);

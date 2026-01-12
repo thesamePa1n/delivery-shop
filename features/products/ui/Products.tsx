@@ -1,6 +1,6 @@
-import { shuffleArray } from "@/lib/utils";
 import { getProducts } from "../api/product.api";
 import ProductsClient from "./Product.client";
+import { CONFIG } from "@/shared/config/config";
 
 type Props = {
   title: string;
@@ -10,14 +10,16 @@ type Props = {
 };
 
 const Products = async ({ title, rightTitle, category, href }: Props) => {
-  const products = await getProducts(category);
+  const products = await getProducts(category, {
+    randomLimit: CONFIG.ITEMS_PER_PAGE_MAIN_PRODUCTS,
+  });
   if (!products) {
     return <div>Ошибка в получении продуктов</div>;
   }
 
-  const filteredProducts = shuffleArray(products)
-    .filter((item) => item.categories.includes(category))
-    .slice(0, 4);
+  const filteredProducts = products.filter((item) =>
+    item.categories.includes(category)
+  );
 
   return (
     <ProductsClient

@@ -1,0 +1,4 @@
+export const CONFIG = {
+  ITEMS_PER_PAGE: 8,
+  ITEMS_PER_PAGE_MAIN_PRODUCTS: 4
+}
